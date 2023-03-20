@@ -22,7 +22,7 @@ var findBlankWords = function (selected_story) {
 
 // populate html with one input box for each blank word
 var setInputWordsPage = function () {
-  [blank_list, selected_story] = findBlankWords(demo_selected_story);
+  [blank_list, blank_story] = findBlankWords(demo_selected_story);
   input_words_html = ''
   for (let word of blank_list) {
     input_words_html += '<label for="fname">'+word+':</label><input type="text" id="fname" name="fname"><br><br></br> '
