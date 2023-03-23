@@ -25,7 +25,7 @@ var setInputWordsPage = function () {
   [blank_list, blank_story] = findBlankWords(demo_selected_story);
   input_words_html = ''
   for (let word of blank_list) {
-    input_words_html += '<label for="fname">'+word+':</label><input type="text" id="fname" name="fname"><br><br></br> '
+    input_words_html += '<div class="main-content__section-block"><label for="fname">'+word+':</label><input type="text" id="fname" name="fname"><br><br></div>'
   }
   document.getElementById("input_words").innerHTML = input_words_html;
 }
