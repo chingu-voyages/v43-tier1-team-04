@@ -38,6 +38,7 @@ var generateStory = function () {
     }
     i++;
   }
+  console.log(blank_story)
   return blank_story
 }
 
@@ -73,7 +74,7 @@ var findBlankWords = function (selected_story) {
 
 // populate html with one input box for each blank word
 var setInputWordsPage = function () {
-  [blank_list, blanked_story] = findBlankWords(selectStory());
+  [blank_list, blanked_story] = findBlankWords(selectStory().replaceAll('\*',''));
   input_words_html = ''
   for (let word of blank_list) {
     input_words_html += '<div class="main-content__section-block"><label for="fname">'+word+':</label><input type="text" id="fname" name="fname"><br><br></div>'
