@@ -1,4 +1,5 @@
-var data = data
+var data = data;
+var blank_story = '';
 
 // - - - CATEGORY PAGE - - -
 
@@ -10,6 +11,35 @@ var categoryClick = function () {
       location.href = "./input_words.html?category="+category;
     };
   }
+}
+
+// read the input boxes content and return the input values the user inserted
+var getInputWords = function () {
+  let form = document.getElementById("input_words");
+  let words = [];
+  for (let input of form) {
+    words.push(input.value)
+  }
+  return words
+}
+
+// generate final story combining input words into the blanked story
+var generateStory = function () {
+  let num_words = (blank_story.match(/\*/g) || []).length;
+  let words = getInputWords();
+  let i = 0;
+  while (blank_story.includes('\*')) {
+    let word = words[i];
+    if (word.includes('\*')) {
+      blank_story = blank_story.replace('\*', 'WRONG_INPUT');
+    }
+    else {
+      blank_story = blank_story.replace('\*', word.toUpperCase());
+    }
+    i++;
+  }
+  console.log(blank_story)
+  return blank_story
 }
 
 
@@ -44,10 +74,11 @@ var findBlankWords = function (selected_story) {
 
 // populate html with one input box for each blank word
 var setInputWordsPage = function () {
-  [blank_list, blank_story] = findBlankWords(selectStory());
+  [blank_list, blanked_story] = findBlankWords(selectStory().replaceAll('\*',''));
   input_words_html = ''
   for (let word of blank_list) {
     input_words_html += '<div class="main-content__section-block"><label for="fname">'+word+':</label><input type="text" id="fname" name="fname"><br><br></div>'
   }
   document.getElementById("input_words").innerHTML = input_words_html;
+  blank_story = blanked_story;
 }
