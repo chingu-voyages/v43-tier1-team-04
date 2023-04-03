@@ -51,6 +51,7 @@ html {
   flex: 1 1 auto;
   display: grid;
   justify-items: stretch;
+  margin-bottom: 13%;
 }
 
 .main-content__section-block {
@@ -95,6 +96,7 @@ html {
     margin: 0 5% 1%;
     gap: 5%;
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    margin-bottom: 13%;
   }
 
   .main__button {
@@ -112,6 +114,7 @@ html {
   .main-content {
     grid-template: repeat(5, 1fr) / repeat(2, 1fr);
     justify-content: center;
+    margin-bottom: 13%;
   }
 
   .main-content__section-block {
@@ -121,6 +124,7 @@ html {
   .main-content {
     margin: 5%;
     gap: 5%;
+    margin-bottom: 13%;
   }
 
   .main__button {

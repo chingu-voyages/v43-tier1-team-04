@@ -68,7 +68,7 @@ var data = {
          From that day on, [name] became known as the master of [adjective] and [adjective] cooking. [Pronoun] even started a restaurant called <<The Spicy [food] Surprise>> and it became a [adjective] hit.\
          And all because of a little mistake in the kitchen."
     },
-    "Mistery": {
+    "Mystery": {
         "Easy": "In the small town of (noun), a (adjective) murder had taken place. Detective (name) was called in to solve the (adjective) mystery. She gathered clues and interviewed suspects until she finally uncovered the (adjective) killer. \
         It was (name), the (noun) who had (verb ending in -ed) the victim out of (noun). Justice was served and the town could rest easy knowing the killer had been caught.",
         "Hard": "Detective [name] was on the case of the missing [adjective] diamond. The diamond had been stolen from the [adjective] museum and everyone was a suspect.\
