@@ -39,7 +39,7 @@ var generateStory = function () {
     i++;
   }
   console.log(blank_story)
-  return blank_story
+  window.location = "./result.html?story="+blank_story;
 }
 
 
@@ -81,4 +81,15 @@ var setInputWordsPage = function () {
   }
   document.getElementById("input_words").innerHTML = input_words_html;
   blank_story = blanked_story;
+}
+
+
+
+// - - - RESULT PAGE - - -
+
+// render resulting story
+var renderStory = function () {
+  let url = new URL(window.location.href);
+  let story = url.searchParams.get("story");
+  document.getElementById("resulting_story").innerText = story;
 }
